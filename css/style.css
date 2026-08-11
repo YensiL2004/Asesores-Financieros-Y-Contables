@@ -4,34 +4,40 @@
     --azul:#0B2545;
     --dorado:#D4AF37;
     --gris:#f5f5f5;
-    --blanco:#ffffff;
+    --blanco:#ffffff; /*SE USA PARA NO ESCRIBIR EL MISMO COLOR MUCHAS VECES*/
 }
 
 /*GENERAL*/
 
 body{
     background: var(--gris);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /*DEFINE EL ESTILO GENERAL DE TODA LA PAGINA,
+                                                  FONDO GRIS, FUENTE ARIAL*/
 }
 
 html{
-    scroll-behavior:smooth;
+    scroll-behavior:smooth; /*AL DARLE CLIC EN EL MENU LA PAGINA BAJE SUAVEMENTE*/
+}
+
+section[id] {
+    scroll-margin-top: 90px; /*Ajusta el destino del ancla para que el contenido no quede oculto
+                              detrás del menú fijo*/
 }
 
 section{
-    padding:70px 0;
+    padding:70px 0; /*ES PARA QUE LA PAGINAAAS NO SE VEA AMONTONADA*/
 }
 
 /*MENU*/
 
 .navbar{
-    background:var(--azul);
+    background:var(--azul); /*CAMBIA EL FONDO DEL MENU A AZUL*/
 }
 
 .navbar-brand{
     color:white !important;
     font-weight:bold;
-    font-size:30px;
+    font-size:30px; /*ESTILO PARA EL LOGO AFC, CAMBIA TAMAÑO, COLOR, GROSOR*/
 }
 
 .brand-badge{
@@ -43,14 +49,15 @@ section{
     border-radius:12px;
     background:linear-gradient(135deg, #f4c542, #0b2545 70%, #2f6ea3);
     color:white;
-    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+    box-shadow:0 4px 12px rgba(0,0,0,0.25); /*ES EL CIRCULO DONDE ESTA EL ICONO DEL CERDITO, 
+                                                DEGRADADO, SOMBRA, BORDES REDONDEADOS*/
 }
 
 .brand-name{
     color:#f4c542;
     font-weight:800;
     letter-spacing:0.08em;
-    text-transform:uppercase;
+    text-transform:uppercase; /*DA COLOR DORADO AL TEXTO AFC, AUMENTA EL GROSOR*/
 }
 
 .navbar-logo{
@@ -59,16 +66,17 @@ section{
     padding:4px;
     border:2px solid var(--dorado);
     border-radius:12px;
-    background: #ffffff10;
+    background: #ffffff10; 
 }
 
 .nav-link{
-    color:white !important;
+    color:white !important; /*ESTILO PARA LOS ENLACES DEL MENU, CAMBIA EL COLOR A BLANCO*/
     margin-left:15px;
 }
 
 .nav-link:hover{
-    color:var(--dorado)!important;
+    color:var(--dorado)!important; /*CUANDO EL USUARIO PONE EL MOUSE ENCIMA DEL ENLACE, 
+                                     CAMBIA EL COLOR A DORADO*/
 }
 
 /*TITULOS*/
@@ -82,12 +90,13 @@ h1,h2,h5{
 /*BOTONES*/
 
 .btn-warning{
-    background:var(--dorado);
+    background:var(--dorado); /*PERSONALIZA EL BOTON AMARILLO DE BOOTSTRAP*/
     border:none;
 }
 
 .btn-warning:hover{
-    background:#b99224;
+    background:#b99224; /*CUANDO EL USUARIO PONE EL MOUSE ENCIMA DEL BOTON, 
+                            CAMBIA EL COLOR A UN AMARILLO MAS OSCURO*/
 }
 
 .welcome-banner{
@@ -100,7 +109,7 @@ h1,h2,h5{
     box-shadow:0 18px 40px rgba(11,37,69,0.28);
     border:1px solid rgba(255,255,255,0.2);
     position:relative;
-    overflow:hidden;
+    overflow:hidden; /*ES UNA TARJETA DECORATIVA, DEGRADADO, SOMBRA, BORDES REDONDEADOS*/
 }
 
 .welcome-banner::before{
@@ -108,7 +117,7 @@ h1,h2,h5{
     position:absolute;
     inset:0;
     background:linear-gradient(120deg, transparent 20%, rgba(212,175,55,0.16) 50%, transparent 80%);
-    pointer-events:none;
+    pointer-events:none; /*AGREGA UN BRILLO ENCIMA DE LA TARJETA*/
 }
 
 .welcome-badge{
@@ -121,7 +130,7 @@ h1,h2,h5{
     font-weight:700;
     letter-spacing:0.2em;
     text-transform:uppercase;
-    margin-bottom:1rem;
+    margin-bottom:1rem; 
 }
 
 .welcome-banner-title{
@@ -129,7 +138,7 @@ h1,h2,h5{
     color:var(--blanco);
     margin-bottom:0.7rem;
     font-weight:800;
-    text-shadow:1px 1px 3px rgba(0,0,0,0.2);
+    text-shadow:1px 1px 3px rgba(0,0,0,0.2); /*CONTROLA EL TAMAÑO DEL TITULO*/
 }
 
 .welcome-banner-text{
@@ -143,7 +152,7 @@ h1,h2,h5{
 /*HERO / INICIO*/
 
 .hero{
-    position:relative;
+    position:relative; /*ES LA PRIMERA PANTALLA DEL INICIO, IMG DE FONDO, ALTURA, ALINEACION*/
     min-height:100vh;
     display:flex;
     align-items:center;
@@ -166,7 +175,8 @@ h1,h2,h5{
     background:rgba(255,255,255,0.08);
     backdrop-filter:blur(6px);
     border-radius:24px;
-    box-shadow:0 18px 40px rgba(0,0,0,0.2);
+    box-shadow:0 18px 40px rgba(0,0,0,0.2); /*ES LA TARJETA TRANSPARENTE, FONDO SEMITRANSPARENTE
+                                                SOMBRE, BORDES REDONDEADOS*/
 }
 
 .btn-principal{
@@ -178,13 +188,14 @@ h1,h2,h5{
     color:var(--azul);
     font-weight:700;
     text-decoration:none;
-    transition:transform 0.2s ease, box-shadow 0.2s ease;
+    transition:transform 0.2s ease, box-shadow 0.2s ease; /*DISEÑA EL BOTON DORADO, COLOR, BORDE 
+                                                            REDONDO, ANIMACION*/
 }
 
 .btn-principal:hover{
     transform:translateY(-2px);
     box-shadow:0 10px 20px rgba(212,175,55,0.25);
-    color:var(--azul);
+    color:var(--azul); 
 }
 
 .btn-secundario{
@@ -196,14 +207,14 @@ h1,h2,h5{
     border-radius:999px;
     color:var(--dorado);
     font-weight:700;
-    text-decoration:none;
+    text-decoration:none; /*TIENE SOLO BORDE DORADO*/
     transition:background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-secundario:hover{
     background-color:var(--dorado);
     color:var(--azul);
-    transform:translateY(-2px);
+    transform:translateY(-2px); /*CUANDO PASAS EL MOUSE SE LLENA DE DORADO*/
 }
 
 .hero-card h5,
